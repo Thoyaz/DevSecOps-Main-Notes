@@ -102,6 +102,10 @@ vim filename
 * `p` → paste below
 * `P` → paste above
 
+## Example
+
+![Alt Text](/images/04_vim.png)
+
 ---
 
 # 👥 User Management (Linux)
