@@ -178,6 +178,10 @@ dig www.example.com
 nslookup www.example.com
 ```
 
+### Example
+
+![Alt Text](/images/05_dns.png)
+
 ---
 
 # 7. File Permissions
