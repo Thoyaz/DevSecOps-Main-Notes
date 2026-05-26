@@ -34,7 +34,7 @@
 * `:%d` → delete all lines
 * `:%s/old/new/g` → replace text
 
-### ⌨️ Normal Mode Commands
+### ⌨️ Esc Mode Commands
 
 * `u` → undo
 * `Ctrl + r` → redo
