@@ -4,16 +4,16 @@
 
 # 📑 Index
 
-* [1. File & Directory Basics](#1-file--directory-basics)
-* [2. Download & Search Tools](#2-download--search-tools)
-* [3. Vim Editor](#3-vim-editor-important)
-* [4. User Management](#4-user-management-linux)
-* [5. Tar Command](#5-tar-command-archiving)
+* [File & Directory Basics](#file--directory-basics)
+* [Download & Search Tools](#download--search-tools)
+* [Vim Editor](#vim-editor-important)
+* [User Management (Linux)](#user-management-linux)
+* [Tar Command](#tar-command-archiving)
 * [Quick Revision Summary](#quick-revision-summary)
 
 ---
 
-# 📁 1. File & Directory Basics
+# 📁 File & Directory Basics
 
 ### 📍 Path Types
 
@@ -24,27 +24,27 @@
 
 * `uname` → system info
 * `ls -ltr` → long list sorted by time
-* `ls -la` → show hidden files
+* `ls -la` → hidden files + details
 * `touch file.txt` → create file
 * `cat file.txt` → view file
-* `cat > file.txt` → write (overwrite)
-* `cat >> file.txt` → append
+* `cat > file.txt` → overwrite file
+* `cat >> file.txt` → append file
 
 ### 📍 File Operations
 
-* `rm file`
-* `rmdir folder`
-* `cp source dest`
-* `mv source dest`
-* `head file`
-* `tail file`
+* `rm file` → delete file
+* `rmdir folder` → remove empty directory
+* `cp source dest` → copy
+* `mv source dest` → move/rename
+* `head file` → first lines
+* `tail file` → last lines
 
 ---
 
-# 🌐 2. Download & Search Tools
+# 🌐 Download & Search Tools
 
-* `wget url` → download file
-* `curl url` → fetch content
+* `wget url` → download files
+* `curl url` → fetch data
 
 ### 🔍 Search Tools
 
@@ -52,7 +52,7 @@
 * `cut -d ":" -f1` → split by delimiter
 * `awk` → advanced processing
 
-Examples:
+#### Examples
 
 ```bash
 awk -F ":" '{print $NF}'
@@ -61,7 +61,7 @@ awk -F ":" '$3>=1000 {print $1, $3}'
 
 ---
 
-# ✍️ 3. Vim Editor (Important)
+# ✍️ Vim Editor (Important)
 
 ### 📌 Open file
 
@@ -76,11 +76,11 @@ vim filename
 * `:q` → quit
 * `:wq` → save & quit
 * `:q!` → force quit
-* `:set nu` → line numbers
+* `:set nu` → show line numbers
 * `:10` → go to line
-* `:/word` → search down
-* `:?word` → search up
-* `:%d` → delete all
+* `:/word` → search top → bottom
+* `:?word` → search bottom → top
+* `:%d` → delete entire file
 * `:noh` → remove highlight
 
 ### Replace
@@ -93,10 +93,10 @@ vim filename
 
 ## 🟢 Normal Mode (Esc)
 
-* `gg` → top
-* `G` → bottom
+* `gg` → top of file
+* `G` → bottom of file
 * `u` → undo
-* `Ctrl+r` → redo
+* `Ctrl + r` → redo
 * `dd` → delete line
 * `yy` → copy line
 * `p` → paste below
@@ -104,17 +104,17 @@ vim filename
 
 ---
 
-# 👥 4. User Management (Linux)
+# 👥 User Management (Linux)
 
-### Concepts
+### 📌 Concepts
 
-* User → person account
-* Group → collection of users
-* Permissions → access control
+* **User** → individual account
+* **Group** → collection of users
+* **Permissions** → access control
 
 ---
 
-### CRUD Commands
+### 🧾 User Commands
 
 ```bash
 useradd ramesh
@@ -125,7 +125,7 @@ cat /etc/group
 
 ---
 
-### Groups
+### 👥 Group Commands
 
 ```bash
 groupadd devops
@@ -135,7 +135,7 @@ usermod -aG testing ramesh
 
 ---
 
-### Password
+### 🔐 Password
 
 ```bash
 passwd ramesh
@@ -143,20 +143,24 @@ passwd ramesh
 
 ---
 
-### SSH Config
+### ⚙️ SSH Config
 
-* `/etc/ssh/sshd_config`
-* `sshd -t` → test config
+* File: `/etc/ssh/sshd_config`
+* Validate:
 
----
-
-### Sudo Access
-
-* `/etc/sudoers`
+```bash
+sshd -t
+```
 
 ---
 
-### Remove user from group
+### 🛡️ Sudo Access
+
+* File: `/etc/sudoers`
+
+---
+
+### ❌ Remove user from group
 
 ```bash
 gpasswd -d ramesh devops
@@ -164,7 +168,7 @@ gpasswd -d ramesh devops
 
 ---
 
-### Delete user
+### 🧨 Delete user
 
 ```bash
 userdel -r ramesh
@@ -172,30 +176,30 @@ userdel -r ramesh
 
 ---
 
-### Best practice steps
+### 🚨 Best Practice Steps
 
 1. Lock user
-2. Remove from groups
-3. Backup home folder
+2. Remove from all groups
+3. Backup home directory
 4. Delete user
 
 ---
 
-# 📦 5. Tar Command (Archiving)
+# 📦 Tar Command (Archiving)
 
-### Create archive
+### 📁 Create archive
 
 ```bash
 tar -cf file.tar folder/
 ```
 
-### Extract archive
+### 📂 Extract archive
 
 ```bash
 tar -xf file.tar
 ```
 
-### gzip format
+### 🗜️ gzip compressed archive
 
 ```bash
 tar -czf file.tar.gz folder/
@@ -206,9 +210,9 @@ tar -xzf file.tar.gz
 
 # ⚡ Quick Revision Summary
 
-* File handling: `cp, mv, rm, cat`
-* Search: `grep, cut, awk`
-* Vim: edit, navigate, replace
-* Users: `useradd, usermod, groupadd`
-* Security: sudo, ssh config
-* Archive: `tar -cf`, `tar -xzf`
+* File handling → `cp, mv, rm, cat`
+* Search → `grep, cut, awk`
+* Vim → editing + navigation + replace
+* Users → `useradd, usermod, groupadd`
+* Security → sudo + ssh config
+* Archive → `tar -cf`, `tar -xzf`
