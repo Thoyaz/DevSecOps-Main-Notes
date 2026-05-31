@@ -182,7 +182,7 @@ systemctl restart <service>
 
 ## Example
 
-![Alt Text](/images/03_three_tire_arch.png)
+![Alt Text](./images/03_three_tire_arch.png)
 
 ---
 

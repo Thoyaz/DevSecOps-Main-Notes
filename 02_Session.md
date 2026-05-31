@@ -128,7 +128,7 @@ When you open a website:
 2. Server processes request
 3. Server sends response back
 
-![Alt Text](/images/01_client_server_example.png)
+![Alt Text](./images/01_client_server_example.png)
 
 ---
 
@@ -208,7 +208,7 @@ User keeps:
 
 * Private key
 
-![Alt Text](/images/02_Public_And_Private_keys.png)
+![Alt Text](./images/02_Public_And_Private_keys.png)
 
 ---
 

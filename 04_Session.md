@@ -104,7 +104,7 @@ vim filename
 
 ## Example
 
-![Alt Text](/images/04_vim.png)
+![Alt Text](./images/04_vim.png)
 
 ---
 

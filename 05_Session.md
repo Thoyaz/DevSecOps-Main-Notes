@@ -180,7 +180,7 @@ nslookup www.example.com
 
 ### Example
 
-![Alt Text](/images/05_dns.png)
+![Alt Text](./images/05_dns.png)
 
 ---
 
